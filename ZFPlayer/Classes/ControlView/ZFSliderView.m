@@ -278,6 +278,8 @@ static const CGFloat kAnimate = 0.3;
     animationGroup.beginTime = CACurrentMediaTime() + 0.4;
     animationGroup.repeatCount = MAXFLOAT;
     animationGroup.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    animationGroup.removedOnCompletion = NO;
+    animationGroup.fillMode = kCAFillModeForwards;
     
     CABasicAnimation *scaleAnimation = [CABasicAnimation animation];
     scaleAnimation.keyPath = @"transform.scale.x";
